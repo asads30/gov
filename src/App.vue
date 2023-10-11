@@ -1,30 +1,28 @@
+<script setup>
+import { RouterView } from 'vue-router'
+import mixpanel from 'mixpanel-browser'
+mixpanel.identify(789)
+// mixpanel.track('UserData', {
+//   platform: 'Android',
+//   language: 'ru',
+//   theme: 'dark',
+//   region: 'Tashkent',
+//   sex: 'M',
+//   age: 28
+// })
+mixpanel.time_event('Registered')
+// mixpanel.track('Registered', { Gender: 'Male', Age: 21 })
+// mixpanel.register({
+//   Email: 'jdoe@example.com',
+//   'Account Type': 'Free'
+// })
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <RouterView />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="scss" scoped>
+@import '@/assets/fonts/fonts';
+@import '@/assets/reset.css';
 </style>

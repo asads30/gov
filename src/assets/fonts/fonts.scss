@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Golos Text', sans-serif;
+  font-display: fallback;
+  src: url("~@/assets/fonts/golos-text_regular.woff2") format('font-type')
+}
+@font-face {
+  font-family: GolosTextBold;
+  font-display: fallback;
+  src: url("~@/assets/fonts/golos-text_bold.woff2") format('font-type')
+}
+@font-face {
+  font-family: GolosTextFv;
+  font-display: fallback;
+  src: url("~@/assets/fonts/golos-text_vf.woff2") format('font-type')
+}

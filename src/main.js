@@ -1,6 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import mixpanel from 'mixpanel-browser'
+import '@/assets/styles/_global.scss'
 
-createApp(App).use(store).use(router).mount('#app')
+mixpanel.init('63ed46bf92fd83cdbe91189aeba6fed7', {
+  debug: true,
+  track_pageview: true,
+  persistence: 'localStorage'
+})
+createApp(App).use(router).mount('#app')
